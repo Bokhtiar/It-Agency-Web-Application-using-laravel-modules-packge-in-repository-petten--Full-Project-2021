@@ -1,0 +1,13 @@
+{
+    "name": "FrontendHomePage",
+    "alias": "frontendhomepage",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\FrontendHomePage\\Providers\\FrontendHomePageServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

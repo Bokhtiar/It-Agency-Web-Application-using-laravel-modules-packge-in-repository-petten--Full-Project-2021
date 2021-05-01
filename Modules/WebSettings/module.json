@@ -1,0 +1,13 @@
+{
+    "name": "WebSettings",
+    "alias": "websettings",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\WebSettings\\Providers\\WebSettingsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
