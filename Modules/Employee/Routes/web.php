@@ -11,10 +11,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('employee')->group(function() {
+Route::group(["as"=>'employee.', "prefix"=>'employee' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'EmployeeController@index');
     Route::get('/create', 'EmployeeController@create');
     Route::post('/store', 'EmployeeController@store');
     Route::get('/edit/{id}', 'EmployeeController@edit');
     Route::get('/delete/{id}', 'EmployeeController@destroy');
 });
+

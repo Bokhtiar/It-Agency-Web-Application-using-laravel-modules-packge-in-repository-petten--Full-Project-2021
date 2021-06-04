@@ -14,7 +14,7 @@ class UserDashboardController extends Controller
      */
     public function index()
     {
-        return "i am User Dashboard";
+        return redirect('/');
     }
 
     /**

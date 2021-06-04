@@ -15,8 +15,14 @@ Route::get('abouts/', 'AboutController@index');
 Route::get('all-service/', 'ServiceController@index');
 Route::get('all-portfolio/', 'PortfolioController@index');
 Route::get('portfolio/detail/{slug}', 'PortfolioController@show');
-Route::get('all-testimonial/', 'TestimonialController@index');
+Route::get('all-testimonial/', 'TestimonialController@all_testimonial');
 Route::get('all-blog/', 'BlogController@index');
+Route::get('all-product/', 'ProductController@index');
+Route::get('all-freelancer/', 'PortfolioController@freelancer');
+Route::get('category-ways-product/{id}', 'ProductController@category_ways_product');
+
+
+
 Route::get('blog/detail/{slug}', 'BlogController@detail');
 Route::get('contact/', 'ContactController@index');
 Route::post('contact/store', 'ContactController@store');

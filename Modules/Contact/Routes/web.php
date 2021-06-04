@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +11,10 @@
 |
 */
 
-Route::prefix('contact-list')->group(function() {
+Route::group(["as"=>'contact-list.', "prefix"=>'contact-list' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'ContactController@index');
     Route::get('/status/{id}', 'ContactController@status');
     Route::get('/delete/{id}', 'ContactController@destroy');
 
 });
+

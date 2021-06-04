@@ -8,6 +8,8 @@ use Modules\Blog\Entities\Blog;
 use Modules\Category\Entities\Category;
 use Modules\Client\Entities\Client;
 use Modules\Portfolio\Entities\Portfolio;
+use Modules\Product\Entities\Product;
+use Modules\ProductCategory\Entities\ProductCategory;
 use Modules\Service\Entities\Service;
 use Modules\Slider\Entities\Slider;
 use Modules\Testimonial\Entities\Testimonial;
@@ -55,6 +57,13 @@ class RouteServiceProvider extends ServiceProvider
         view()->composer('*', function($view) {
             $view->with('services', Service::all());
         });//service end
+
+        view()->composer('*', function($view) {
+            $view->with('productcategories', ProductCategory::all());
+        });//product Category
+        view()->composer('*', function($view) {
+            $view->with('products', Product::all());
+        });//product
 
         view()->composer('*', function($view) {
             $view->with('portfolios', Portfolio::all());

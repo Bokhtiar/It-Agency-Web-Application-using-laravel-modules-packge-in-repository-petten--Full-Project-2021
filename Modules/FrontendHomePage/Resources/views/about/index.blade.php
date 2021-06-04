@@ -47,7 +47,7 @@
 
       <div class="section-title" data-aos="fade-up">
         <h2>Our <strong>Team</strong></h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>Members work better together than individually. When team members perform better as a group than alone, collective performance exceeds individual.</p>
       </div>
 
       <div class="row">

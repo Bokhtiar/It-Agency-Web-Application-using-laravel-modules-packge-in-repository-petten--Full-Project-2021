@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +11,9 @@
 |
 */
 
-Route::prefix('quote')->group(function() {
+Route::group(["as"=>'quote.', "prefix"=>'quote' ,"middleware"=>['auth','admin']],function() {
     Route::get('/all', 'QuoteController@index');
     Route::get('/status/{id}', 'QuoteController@status');
     Route::get('/delete/{id}', 'QuoteController@destroy');
 });
+

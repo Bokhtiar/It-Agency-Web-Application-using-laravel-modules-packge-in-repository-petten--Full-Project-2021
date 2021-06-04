@@ -6,11 +6,10 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Flattern</h3>
+            <h3> {{$topheader->company_name}}</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
+                {{$topheader->location}}<br>
+             <br>
               <strong>Phone:</strong> {{$topheader->phone}}<br>
               <strong>Email:</strong> {{$topheader->email}}<br>
             </p>
@@ -41,7 +40,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
+            <h4>About Us</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
@@ -55,15 +54,11 @@
     <div class="container d-md-flex py-4">
 
       <div class="mr-md-auto text-center text-md-left">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Flattern</span></strong>. All Rights Reserved
+        <div class="">
+
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

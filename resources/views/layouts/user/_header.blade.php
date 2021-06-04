@@ -1,5 +1,3 @@
-
-
   <section id="topbar" class="d-none d-lg-block">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
@@ -33,9 +31,11 @@
           <li class="active"><a href="{{url('/')}}">Home</a></li>
           <li><a href="{{url('abouts/')}}">About</a></li>
           <li><a href="{{url('all-service/')}}">Services</a></li>
-          <li><a href="{{url('all-portfolio')}}">Portfolio</a></li>
+          <li><a href="{{url('all-freelancer')}}">Freelancers</a></li>
           <li><a href="{{url('all-testimonial')}}">Testimonials</a></li>
           <li><a href="{{url('all-blog')}}">Blog</a></li>
+          <li><a href="{{url('all-product')}}">Shop</a></li>
+          <li><a href="{{url('cart/details')}}">Cart <span style="color: orange";>{{ Modules\Cart\Entities\Cart::total_item_cart() }}</span> </a></li>
           @foreach ($navbars as $navbar)
           <li><a href="{{url('http://localhost:8000/navbar-menu/'.$navbar->slug)}}">{{$navbar->name}}</a></li>
           @endforeach
@@ -46,6 +46,7 @@
             <ul>
             @if(Auth::user()->role->id==1)
               <li><a href="{{url('/')}}">Dashboard </a></li>
+              <li><a href="{{url('/order/list')}}">Order List</a></li>
               <li><a href="{{url('logout/')}}">Logout</a></li>
             @elseif(Auth::user()->role->id==2)
               <li><a href="{{url('admin/dashboard')}}">Dashboard</a></li>

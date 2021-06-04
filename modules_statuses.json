@@ -22,5 +22,10 @@
     "Client": true,
     "BlogCategory": true,
     "Contact": true,
-    "Quote": true
+    "Quote": true,
+    "ProductCategory": true,
+    "Product": true,
+    "Cart": true,
+    "Order": true,
+    "Freelancer": true
 }

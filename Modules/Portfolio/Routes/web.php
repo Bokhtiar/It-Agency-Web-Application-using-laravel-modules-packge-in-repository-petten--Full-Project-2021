@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('portfolio')->group(function() {
+Route::group(["as"=>'portfolio.', "prefix"=>'portfolio' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'PortfolioController@index');
     Route::get('/create', 'PortfolioController@create');
     Route::post('store/', 'PortfolioController@store');
@@ -20,3 +20,4 @@ Route::prefix('portfolio')->group(function() {
     Route::get('edit/{id}', 'PortfolioController@edit');
     Route::get('delete/{id}', 'PortfolioController@destroy');
 });
+

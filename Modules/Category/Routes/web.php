@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::prefix('category')->group(function() {
+Route::group(["as"=>'category.', "prefix"=>'category' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'CategoryController@index');
     Route::post('store/', 'CategoryController@store');
     Route::post('store/{id}', 'CategoryController@store');

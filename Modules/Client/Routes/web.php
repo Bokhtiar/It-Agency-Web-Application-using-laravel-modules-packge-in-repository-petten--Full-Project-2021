@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('client')->group(function() {
+Route::group(["as"=>'client.', "prefix"=>'client' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'ClientController@index');
     Route::get('/create', 'ClientController@create');
     Route::post('store/', 'ClientController@store');
@@ -20,3 +20,4 @@ Route::prefix('client')->group(function() {
     Route::get('edit/{id}', 'ClientController@edit');
     Route::get('delete/{id}', 'ClientController@destroy');
 });
+

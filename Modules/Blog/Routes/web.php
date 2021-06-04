@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('blog')->group(function() {
+Route::group(["as"=>'blog.', "prefix"=>'blog' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'BlogController@index');
     Route::get('/create', 'BlogController@create');
     Route::post('store/', 'BlogController@store');

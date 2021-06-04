@@ -30,15 +30,13 @@
             @endforeach
 
           <div class="portfolio-info">
-            <h4>App 1</h4>
-            <p>App</p>
+            <p>Detail</p>
             <a href="{{asset($image[0])}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="{{url('portfolio/detail/'.$portfolio->slug)}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
         @endforeach
       </div>
-
     </div>
   </section><!-- End Portfolio Section -->
 @endsection

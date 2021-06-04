@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('testimonial')->group(function() {
+
+Route::group(["as"=>'testimonial.', "prefix"=>'testimonial' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'TestimonialController@index');
     Route::get('/create', 'TestimonialController@create');
     Route::post('store/', 'TestimonialController@store');
@@ -20,3 +21,4 @@ Route::prefix('testimonial')->group(function() {
     Route::get('edit/{id}', 'TestimonialController@edit');
     Route::get('delete/{id}', 'TestimonialController@destroy');
 });
+

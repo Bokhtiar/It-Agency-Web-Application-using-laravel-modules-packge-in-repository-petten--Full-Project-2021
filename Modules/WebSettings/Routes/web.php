@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('topheader')->group(function() {
+Route::group(["as"=>'topheader.', "prefix"=>'topheader' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'TopHeaderController@index');
     Route::post('/store', 'TopHeaderController@store');
     Route::post('/store/{id}', 'TopHeaderController@store');
@@ -21,7 +21,7 @@ Route::prefix('topheader')->group(function() {
 
 
 
-Route::prefix('navbar')->group(function() {
+Route::group(["as"=>'navbar.', "prefix"=>'navbar' ,"middleware"=>['auth','admin']],function() {
     Route::get('create', 'MenuController@create');
     Route::post('store', 'MenuController@store');
     Route::post('store/{id}', 'MenuController@store');

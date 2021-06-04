@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('slider')->group(function() {
+Route::group(["as"=>'slider.', "prefix"=>'slider' ,"middleware"=>['auth','admin']],function() {
     Route::get('/', 'SliderController@index');
     Route::get('/create', 'SliderController@create');
     Route::post('store/', 'SliderController@store');
